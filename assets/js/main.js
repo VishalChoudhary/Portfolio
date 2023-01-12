@@ -29,7 +29,22 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click',linkAction));
 
 /*==================== ACCORDION SKILLS ====================*/
+const skillsContent=document.getElementsByClassName('skills-content'),
+    skillsHeader=document.querySelectorAll('.skills-header');
 
+function toggleSkills(){
+    let itemClass=this.parentNode.className;
+    console.log(itemClass);
+    for(i=0;i<skillsContent.length;i++){
+        skillsContent[i].className='skills-content skills-close';
+    }
+    if(itemClass === 'skills-content skills-close'){
+        this.parentNode.className= 'skills-content skills-open';
+    }
+}
+skillsHeader.forEach((eL)=>{
+    eL.addEventListener('click',toggleSkills)
+});
 
 /*==================== QUALIFICATION TABS ====================*/
 
