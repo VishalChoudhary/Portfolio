@@ -207,7 +207,9 @@ img{
 }
 
 /* Active link */
-
+.active-link{
+    color: var(--first-color);
+}
 
 /* Change background header */
 
@@ -650,10 +652,6 @@ img{
 .footer-social{
     color: #FFF;
 }
-.footer-
-.footer-
-.footer-
-
 /*========== SCROLL UP ==========*/
 
 
