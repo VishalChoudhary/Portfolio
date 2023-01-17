@@ -451,6 +451,18 @@ img{
 .skills-fb{
     width: 70%;
 }
+.skills-python{
+    width: 80%;
+}
+.skills-algos{
+    width: 90%;
+}
+.skills-model{
+    width: 60%;
+}
+.skills-nueral{
+    width: 70%;
+}
 .skills-close .skills-list{
     height: 0;
     overflow: hidden;
