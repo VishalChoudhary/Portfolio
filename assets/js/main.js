@@ -29,47 +29,41 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click',linkAction));
 
 /*==================== ACCORDION SKILLS ====================*/
-const skillsContent=document.getElementsByClassName('skills-content'),
-    skillsHeader=document.querySelectorAll('.skills-header');
-
-function toggleSkills(){
-    let itemClass=this.parentNode.className;
-    
-    for(i=0;i<skillsContent.length;i++){
-        skillsContent[i].className='skills-content skills-close';
-    }
-    console.log(itemClass)
-    if(itemClass === 'skills-content skills-close'){
-        this.parentNode.className= 'skills-content skills-open';
-    }
-}
-skillsHeader.forEach((eL)=>{
-    eL.addEventListener('click',toggleSkills)
-});
-
 // const skillsContent=document.getElementsByClassName('skills-content'),
 //     skillsHeader=document.querySelectorAll('.skills-header');
-//     function toggleSkillsDown(){
-//         let itemClass=this.parentNode.className;
-//         console.log(itemClass);
-//         if(itemClass==='skills-content skills-close'){
-//             this.parentNode.className= 'skills-content skills-open';
-//         }
-//     }
-//     skillsHeader.forEach((eL)=>{
-//         eL.addEventListener('click',toggleSkillsDown)
-//     });
 
-    // function toggleSkillsUp(){
-    //     let itemClass=this.parentNode.className;
-    //     console.log(itemClass);
-    //     if(itemClass==='skills-content skills-open'){
-    //         this.parentNode.className= 'skills-content skills-close';
-    //     }
-    // }
-    // skillsHeader.forEach((eL)=>{
-    //     eL.addEventListener('click',toggleSkillsUp)
-    // });
+// function toggleSkills(){
+//     let itemClass=this.parentNode.className;
+    
+//     for(i=0;i<skillsContent.length;i++){
+//         skillsContent[i].className='skills-content skills-close';
+//     }
+//     console.log(itemClass)
+//     if(itemClass === 'skills-content skills-close'){
+//         this.parentNode.className= 'skills-content skills-open';
+//     }
+// }
+// skillsHeader.forEach((eL)=>{
+//     eL.addEventListener('click',toggleSkills)
+// });
+
+//Updated js for skills content
+const skillsContent=document.getElementsByClassName('skills-content'),
+    skillsHeader=document.querySelectorAll('.skills-header');
+    function toggleSkills(){
+        let itemClass=this.parentNode.className;
+        console.log(itemClass);
+        if(itemClass==='skills-content skills-close'){
+            this.parentNode.className= 'skills-content skills-open';
+        }
+        if(itemClass==='skills-content skills-open'){
+            this.parentNode.className= 'skills-content skills-close';
+        }
+    }
+    skillsHeader.forEach((eL)=>{
+        eL.addEventListener('click',toggleSkills)
+    });
+
 
 /*==================== QUALIFICATION TABS ====================*/
 const tabs=document.querySelectorAll('[data-target]'),
