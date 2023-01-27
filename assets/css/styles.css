@@ -928,6 +928,9 @@ img{
     .home-social{
         transform: translateX(-6rem);
     }
+    .nav{
+        margin: 10px 150px;
+    }
     .portfolio-content{
         column-gap: 5rem;
     }
