@@ -659,6 +659,11 @@ img {
     width: 300px;
     border-radius: .5rem;
     justify-self: center;
+    /* height: 350px; */
+}
+
+.portfolio-img-edit {
+    height: 270px;
 }
 
 .portfolio-title {
