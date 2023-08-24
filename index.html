@@ -556,7 +556,7 @@
         </section>
 
         <!--==================== PROJECT IN MIND ====================-->
-        <section class="project section">
+        <!-- <section class="project section">
             <div class="project-bg">
                 <fiv class="project-container container grid">
                     <div class="project-data">
@@ -570,7 +570,7 @@
                     <img src="./assets/img/pic1.png" alt="" class="project-img">
                 </fiv>
             </div>
-        </section>
+        </section> -->
 
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
@@ -602,30 +602,34 @@
                     </div>
                 </div>
 
-                <form action="" class="contact-form grid">
+                <form onsubmit="sendEmail(); reset(); return false;" class="contact-form grid">
                     <div class="contact-inputs grid">
                         <div class="contact-content">
                             <label for="" class="contact-label">Name</label>
-                            <input type="text" class="contact-input">
+                            <input type="text" id="name" class="contact-input">
                         </div>
                         <div class="contact-content">
                             <label for="" class="contact-label">Email</label>
-                            <input type="email" class="contact-input">
+                            <input type="email" id="email" class="contact-input">
                         </div>
                     </div>
                     <div class="contact-content">
-                        <label for="" class="contact-label">Project</label>
-                        <input type="text" class="contact-input">
+                        <label for="" class="contact-label">Phone Number</label>
+                        <input type="text" id="phone" class="contact-input">
                     </div>
                     <div class="contact-content">
                         <label for="" class="contact-label">Message</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact-input"></textarea>
+                        <textarea id="message" cols="0" rows="7" class="contact-input"></textarea>
                     </div>
                     <div>
-                        <a href="#" class="button button-flex">
+                        <!-- <a href="#" class="button button-flex">
                             Send Message
                             <i class="uil uil-message button-icon"></i>
-                        </a>
+                        </a> -->
+                        <button type="submit" class="button button-flex">
+                            Send Message
+                            <i class="uil uil-message button-icon"></i>
+                        </button>
                     </div>
                 </form>
             </div>
@@ -676,6 +680,22 @@
 
     <!--==================== MAIN JS ====================-->
     <script src="./assets/js/main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <Script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "username",
+                Password: "password",
+                To: 'them@website.com',
+                From: "you@isp.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        }
+    </Script>
 </body>
 
 </html>
