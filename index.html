@@ -681,21 +681,20 @@
     <!--==================== MAIN JS ====================-->
     <script src="./assets/js/main.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <Script>
+    <script type="text/javascript">
         function sendEmail() {
             Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "username",
-                Password: "password",
-                To: 'them@website.com',
-                From: "you@isp.com",
-                Subject: "This is the subject",
-                Body: "And this is the body"
-            }).then(
-                message => alert(message)
-            );
+                SecureToken: "63e65026-bac3-4ec3-b386-fd1f9096ff81",
+                To: 'vishalchoudhary848@gmail.com',
+                From: "shiver0103@gmail.com",
+                Subject: "Testing Email using javascript",
+                Body: "If you are reading this, dont forget to applaud"
+            })
+                .then(function (message) {
+                    alert("Email successfully sent")
+                });
         }
-    </Script>
+    </script>
 </body>
 
 </html>
